@@ -1,0 +1,43 @@
+Global Variable >>>
+
+#include <iostream>
+using namespace std;
+// This is a global variable
+char myVar = 'A';
+int main()
+{
+   cout <<"Value of myVar: "<< myVar<<endl;
+   myVar='Z';
+   cout <<"Value of myVar: "<< myVar;
+   return 0;
+}
+
+>>> Output:
+
+Value of myVar: A
+Value of myVar: Z
+
+//global variables declared outside of main and We have accessed the variable twice in the main() function without any issues.
+
+Local Variable >>>
+
+Local variables are declared inside the braces of any user defined function, main function, loops or
+any control statements(if, if-else etc) and have their scope limited inside those braces.
+
+#include <iostream>
+using namespace std;
+
+char myFuncn() {
+// This is a local variable
+char myVar = 'A';
+}
+int main()
+{
+   cout <<"Value of myVar: "<< myVar<<endl;
+   myVar='Z';
+   cout <<"Value of myVar: "<< myVar;
+   return 0;
+}
+
+>>>Compile time error, because we are trying to access the variable myVar outside of its scope.
+The scope of myVar is limited to the body of function myFuncn(), inside those braces.
